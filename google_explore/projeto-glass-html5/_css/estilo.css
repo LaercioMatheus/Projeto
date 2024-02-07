@@ -1,0 +1,303 @@
+@charset "UTF-8";/*INFORMA QUE TODOS OS CARACTERES DAS CONFIGURAÇOES VAO SER NA FORMA DE 'UTF-8'*/
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');/*AQUI VAI SER O LINK PARA A IMPORTACAO DA FONTE PARA O SUBTITULO, VINDO DO GOOGLE (O NOME DA FONTE É 'Titillium Web')*/
+@font-face {
+    font-family: 'FonteLogo';
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+
+
+/*AS CONFIGURAÇÕES DO FUNDO DA PÁGINA*/
+body {
+    font-family: Arial, sans-serif;
+    /*OS CODIGOS EM HEXADECIMAL COMECA COM CERQUILHA 'VERMELHO', 'VERDE', 'AZUL'*/
+    background-color: #dddddd; /*A COR DO FUNDO*/
+    color: rgba(0, 0, 0, 1); /*A OPACIDADE DA COR DA FONTE*//*RGBA. 'A' SIGNIFICA A COR ALFA*/
+}
+
+/*CONFIGURACOES DE div QUE VAI DELIMITAR A ESTRUTURA DA INTERFACE DO SITE*/
+div#interface {
+    width: 900px; /*A LARGURA DO ESPAÇO DA DIV*/
+    background-color: #ffffff;/*A COR DO FUNDO DA div DE TODO O CONTEUDO DA PÁGINA*/
+
+    /*A MARGEM SEGUE ESSA ORDEM >>> 1ºCIMA, 2°DIREITA, 3°BAIXO, 4°ESQUERDA*/
+    margin: -20px auto 0px auto; /*A FORMATAÇÃO DA MARGEM SUPERIOR DA PAGINA*/
+    box-shadow: 0px 0px 10px rgba(0, 0, 0,.5); /*A COR DA SOMBRA DA BORDA DA PAGINA*/
+    padding: 10px; /*O TAMANHO DA BORDA, DE DENTRO, EM VOLTA DE TODO O CONTEUDO DA PAGINA*/
+}
+
+/*AS CONFIGURAÇÕES DOS PARAGRAFOS DA PAGINA*/
+p {
+    text-align: justify;/*O TEXTO JUSTIFICADO*/
+    text-indent: 50px; /*O ESPACO DA PRIMEIRA LINHA DE CADA PARAGRAFOS (travessao)*/
+}
+
+/*FORMATACOES DOS LINKS DE NAVEGACAO*/
+a {
+    color: #606060;
+    text-decoration: none;
+}
+
+/*O EFEITO DE SUBLINHADO A FONTE DOS LINKS*/
+a:hover {
+    text-decoration: underline;
+}
+
+
+/*AS CONFIGURACOES DA IMAGEM DO OCULOS ANTES DO MENU*/
+header#cabecalho img#icone {
+    position: absolute;
+    left: 950px;
+    top: 75px;
+}
+
+/*CONFIGURACAO DE TODOS OS OBJETOS DE DENTRO DA div 'header'*/
+header#cabecalho {
+    border-bottom: 1px #606060 solid; /*BORDA DE BAIXO*/
+    height: 150px;
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;/*IMAGEM DA LOGO*/
+}
+
+/*CONFIGURACOES DO CABECALHO 'header'*/
+header#cabecalho h1 {
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 30pt;/*TAMANHO DA FONTE*/
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0,.6);
+    padding: 0px;/*ESPACAMENTO INTERNO*/
+    margin-bottom: 0px;/*MARGEM DE BAIXO*/
+}
+
+header#cabecalho h2 {
+    font-family: 'Titillium Web', sans-serif;/*FONTE DO SUBTITULO SENDO INSTANCIADA*/
+    color: #888888;
+    font-size: 15pt;/*TAMANHO DA FONTE*/
+    padding: 0px;
+    margin-top: 0px;/*MARGEM DE CIMA*/
+}
+
+/* Formatação de imagens com legendas */
+
+figure.foto-legenda {
+    position: relative;
+    border: 8px solid white;
+    box-shadow: 1px 1px 4px black;
+}
+
+figure.foto-legenda img {
+    width: 100%;
+    height: 100%;
+}
+
+figure.foto-legenda figcaption {
+    opacity: 0;
+    position: absolute;
+    top:0px;
+    background-color: rgba(0, 0, 0,.4);
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: opacity 1s;
+}
+figure.foto-legenda:hover figcaption {
+    opacity: 1;
+
+}
+
+/*Formatação do Menu */
+/*sempre que for id coloca a #*/
+/*Na formataçao, Tudo que for ul*/
+nav#menu ul {
+    display: block;
+}
+
+nav#menu ul {
+    list-style: none; /*RETIRA AS MARCAS DE LISTA COMO OS PONTOS E NUMEROS*/
+    text-transform: uppercase; /*COLOCA A FONTE DO MENU EM SOMENTE MAIUSCULO*/
+    position: absolute; /*POSICAO RELATIVA FICA PRESO DENTRO DE UM CONTEINER E A POSICAO ABSOLUTA FICA LIVRE PELO ESPAÇO DO SITE*/
+    top: -10px; /*MEXE NA POSICAO DO TOPO*/ /*ERA PARA SER -10*/
+    left: 500px; /*MEXE NA POSICAO DA ESQUERDA*/
+}
+
+nav#menu li {
+    display: inline-block;/*COLOCA TODOS OS ELEMENTOS DA LISTA EM UMA MESMA LINHA*/
+    background-color: #dddddd; /*A COR DE FUNDO*/
+    padding: 10px; /*DA UM ESPACO DE DENTRO DA CAIXA DO OBJETO*/
+    margin: 2px; /*DA UM ESPACO DO LADO DE FORA DA CAIXA DO OBJETO */
+    transition: background-color 1s;
+}
+
+/*O 'hover' GERA O EFEITO QUANDO O MAUSE PASSA POR CIMA DO OBJETO*/
+nav#menu li:hover {
+    background-color: #606060;
+}
+
+/*ESCONDENDO O ITEM 'menu principal'*/
+nav#menu h1 {
+    display: none;
+}
+
+/*OCULTANDO O SUBLINHADO E DEFININDO A COR DA FONTE DO LINK DO MENU*/
+nav#menu a {
+    color: #000000;/*A COR PRETA DA FONTE*/
+    text-decoration: none; /*TIRANDO O SUBLINHADO */
+}
+
+nav#menu li {
+    border-radius: 5px;
+}
+
+/*MUDANDO A COR DA FONTE QUANDO O FUNDO DO OBJETO FICAR COM O EEFEITO ESCURO*/
+nav#menu li :hover {
+    color: #ffffff; /*A COR PARA BRANCO*/
+    /*text-decoration: underline;*/ /*VOLTAR O SUBLINHADO DO LINK*/
+}
+
+/*PARA USAR O 'float' O 'DISPLAY' TEM QUE ESTA CONFIGURADO EM BLOCO*/
+section#corpo {
+    display: block;
+    width: 500px;
+    float: left;/*O 'section' DO 'id corpo' VAI FLUTUAR PELO LADO ESQUERDO*/
+    border-right: 1px solid #606060;
+    padding-right: 15px;
+}
+
+/*FORMATACAO PARA TODOS OS 'h2'*/
+article#noticia-principal h2 {
+    font-size: 12pt;
+    color: #606060;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 10px;/*MARGEM INTERNA*/
+    margin: 10px 0px 10px 0px;/*MARGEM EXTERNA*/
+}
+
+/*FORMATACAO DE TODOS OS 'h1' DO CABECALHO*/
+header#cabecalho-artigo h1 {
+    /*sans sertif SIGNIFICA SEM SERIFA QUE E OS DETALHES QUE TEM EM CIMA E ABAIXO DAS LETRAS*/
+    font-family: 'FonteLogo', sans-serif;/*ESSA FONTE E A MESMA DO LOGO DO SITE*/
+    font-size: 20pt;
+    color: #606060;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.direita {
+    text-align: right;
+}
+
+/*FORMATACAO DE TODOS OS 'h2' DO CABECALHO*/
+header#cabecalho-artigo h2 {
+    font-size: 13pt;
+    color: #cecece;
+    background-color: #ffffff;
+    margin: 0px;
+}
+
+/**/
+header#cabecalho-artigo h3 {
+    font-size: 12pt;
+    color: #606060;
+
+}
+
+/*STILOS PARA A TABELA*/
+table#tabelaspec {
+    border: 1px solid #606060;
+    border-spacing: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*ESTILOS PARA AS CELULAS DA TABELA*/
+table#tabelaspec td {
+    border: 1px solid #606060;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+
+}
+/*PARA IDENTIFICAR UMA CLASSE USA O PONTO*/
+/*CONFIGURACOES DA COLUNA DA ESQUERDA DA TABELA*/
+table#tabelaspec td.ce {
+    color: #ffffff;
+    background-color: #606060;
+    vertical-align: top;
+    font-weight: bold;
+}
+
+/*CONFIGURACOES DA COLUNA DA DIREITA DA TABELA*/
+table#tabelaspec td.cd {
+    background-color: #cecece;
+}
+
+/*CONFIGURACOES DO CABECALHO DA TABELA*/
+table#tabelaspec caption {
+    color: #888888;
+    font-size: 14pt;
+    font-weight: bolder;
+}
+
+/*CONFIGURACOES DA DATA NO CANTO DA ESQUERDO DA TABELA*/
+table#tabelaspec caption span {
+    display: block;
+    float: right;
+    color: #000000;
+    font-size: 8pt;
+    margin-top: 10px;
+}
+
+/*FORMATACOES OS ELEMENTOS DA PARTE ESQUERDA DO SITE*/
+aside#lateral {
+    display: block;
+    width: 350px;
+    float: right;/*O 'aside' DO 'id lateral' VAI FLUTUAR PELO LADO DIREITO*/
+    background-color: #dddddd;
+    padding: 10px;/*ESSE 'padding' E PARA DAR UM ESPACO DA PARTE ESQUERDA DO SITE DO SEPARADOR DO CENTRAL DO SITE*/
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, .5);
+}
+
+/*FORMATACOES DE TUDO QUE FOR 'h1' DA PARTE ESQUERDA DO SITE*/
+aside#lateral h1 {
+    /*USANDO A FONTE DA LOGO DO SITE*/
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-top: 0px;
+}
+/*FORMATACOES DE TUDO QUE FOR 'h2' DA PARTE ESQUERDA DO SITE*/
+aside#lateral h2 {
+    background-color: #606060;
+    font-size: 14pt;
+    color: #ffffff;
+    padding: 5px;
+}
+
+/*ESTILOS DOS VIDEOS DO GOOGLE GLASS*/
+video#primeiro-dia {
+    display: block;
+    position: relative;
+    width: 500px;
+    padding: 5px;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, .5);
+}
+
+video#outras-noticias {
+    display: block;
+    position: relative;
+    width: 350px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0,.4);
+    
+}
+
+footer#rodape {
+    /*O 'clear: both' VAI FAZER COM QUE TODO O CONTEUDO QUE ESTA DENTRO DELE SEJA MOSTRADO FORA DA DIVISAO DO 'corpo e rodape'*/
+    clear: both;/*VAI LIMPAR AS CONFIGURACOES DOS DOIS LADOS O '#corpo' E O '#lateral'*/
+    border-top: 1px solid #606060;   
+}
+/*footer#rodape SIGNIFICA O FOOTER COM 'id' CHAMADO RODAPE COM TUDO DENTRO DO PARAGRAFO*/
+footer#rodape p {
+    text-align: center;
+}

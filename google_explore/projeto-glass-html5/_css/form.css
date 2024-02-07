@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+/*ESTILOS PARA O FORMULARIO DE CONTATO*/
+form {
+    width: 500px;
+    margin: auto;
+}
+
+/*COLOCANDO PARA OS textarea APENAS COLOCA A VIRGULA*/
+input, textarea {
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 13pt;
+    background-color: rgba(255, 255, 255, .8);
+}
+
+/*CONFIGURACAO DO EFEITO DE QUANDO PASSAR O MOUSE POR CIMA FICAR COM A COR MAIS ESCURA*/
+/*COLOCANDO PARA OS textarea APENAS COLOCA A VIRGULA*/
+input:hover, textarea:hover {
+    background-color: #dddddd;
+}
+
+/*FORMATACAO DE TODAS AS LEGENDAS DOS CAMPOS DO FORMULARIO*/
+legend {
+    color: #888888;
+    font-weight: bold;
+    font-size: 13pt;
+    font-family: sans-serif;
+}
+
+
+fieldset {
+    border-color: #cecece;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+/*DIMINUINDO O TAMANHO DO fieldset DO SEXO*/
+fieldset#sexo {
+    width: 150px;
+    border-radius: 10px;
+}
+
+/*COLOCANDO A IMAGEM DO ICONE DO USUARIO NO FUNDO DO fieldset DO USUARIO*/
+fieldset#usuario {
+    background: url('../_imagens/icone-contato.png') no-repeat 95% 95%;
+
+}
+
+/*COLOCANDO A IMAGEM DO ICONE DO ENDERECO NO FUNDO DO fieldset DE ENDERECO*/
+fieldset#endereco {
+    background: url('../_imagens/icone-endereco.png') no-repeat 95% 95%;
+}
+
+/*COLOCANDO A IMAGEM DO ICONE DA MENSAGEM NO fieldset DE MENSAGEM*/
+fieldset#mensagem {
+    background: url('../_imagens/icone-mensagem.png')no-repeat 95% 95%;
+}
+
+/*COLOCANDO A IMAGEM DO ICONE DA MANSAGEM NO fieldset DE PEDIDO E PAGAMENTO*/
+fieldset#pedido {
+    background: url('../_imagens/icone-pagamento.png') no-repeat 95% 95%;
+}

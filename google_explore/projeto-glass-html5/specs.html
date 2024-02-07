@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Tudo sobre Google Glass</title>
+   <link rel="stylesheet" href="_css/estilo.css"/>
+   <link rel="stylesheet" href="_css/specs.css"/>
+
+   <!--AS CONFIGURACOES EM JAVASCRIPT PARA OS EFEITOS DAS IMAGENS DO MENU-->
+<!--ESSE CODIGO EM JAVASCRIPT ESTA NO ARQUIVO HTML PORQUE ELE E UMA CONFIGURACAO JS INTERNA-->
+<!--ESSA E O 'LINK' PARA O ARQUICO JAVASCRIPT EXTERNO-->
+<script src="_javascript/funcoes.js"></script>
+</head>
+<body>
+<div id="interface">
+
+    <!--A DELIMITACAO DO header E O CABECALHO DO SITE-->
+<header id="cabecalho">
+    
+    <!--hgroup SERVE PARA AGRUPAR UM GRUPO DE TITULOS-->
+    <hgroup>
+        <h1>Google Glass</h1>
+        <h2>A revolução do Google está chegando</h2>
+    </hgroup>
+<!--A IMAGEM DO OCULOS ABAIXO DO MENU-->
+    <img id="icone" src="_imagens/especificacoes.png" alt="Logo do site Google Glass"/>
+
+    <!--A TAG nav SIGNIFICA QUE TUDO VAI SER CONSIDERADO UM MENU DE NAVEGACAO-->
+ <nav id="menu"> <!--A TAG 'id' SERVE PARA CRIA UMA IDENTIFICACAO PARA A TAG-->
+    <h1>Principal</h1>
+
+    <!--SEMPRE TENHO QUE DEFINIR O TYPE COMO ABAIXO 'disc' SEGUIDO DO START COM ***NUMERO*** -->
+    <ul>
+        <!--PARA LINKS EXTERNOS TENHO QUE COLOCAR O "https"-->
+        <!--ESTOU USANDO UM OBJETO DE MENU PARA MODIFICAR OUTRO OBJETO COM IDENTIFICADOR 'icone'-->
+        <li onmousemove="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="index.html">Home</a></li>
+
+        <li onmousemove="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="specs.html">Especificações</a></li>
+
+        <li onmousemove="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="fotos.html">Fotos</a></li>
+
+        <li onmousemove="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="multimidia.html">Multimídia</a></li>
+
+        <li onmousemove="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+    </ul>
+ </nav>
+</header>
+
+<section id="corpo-full">
+    <article id="noticia-principal">
+        <header id="cabecalho-artigo">
+            <hgroup>
+                <h3>Glass > Especificações</h3>
+                <h1>Raio-X no Google Glass</h1>
+                <h2>por Gustavo Guanabara & Laércio Matheus</h2>
+                <h3 class="direita">Atualizado em 29/Janeiro/2024</h3>
+            </hgroup>
+        </header>
+        
+        <p>Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.</p>
+        
+        <section id="conteudo">
+            <img src="_imagens/glass-esquema-marcado.jpg" alt="Imagem do óculos com partes clicavel" usemap="#meumapa">
+            <!--O PARAMETRO 'usemap="#meumapa" E UMA LIGACAO A TAG map E ESTA INFORMANDO QUE E PARA USAR OS PARAMETROS QUE E RELATIVO AO ID'meumapa'-->
+            <!--ESSA TAG map PODE ESTA EM QUALQUER PARTE DO DOCUMENTO, MAS E BOM COLOCAR LOGO APOS A TAG RELATIVA A ELA-->
+            <!--O href VAI ABRIR O ARQUIVO "google-glass.html" DIRETAMENTE POSICIONADO NO ARTIGO DE TELA (#tela)-->
+            <!--O target SIGNIFICA O ALVO É EM QUE LUGAR ARQUIVO SERA ABERTO VAI SER 'janela'-->
+            <map name="meumapa">
+                <!--PRIMEIRA AREA E LINK DA TELA-->
+                <area shape="rect" coords="179,202,270,260" href="google-glass.html#tela" target="janela" alt="Parte da tela onde o usuário vai poder ver informações desejadas.">
+                <!--SEGUNDA AREA E LINK DA CAMERA-->
+                <area shape="circle" coords="158,243,12" href="google-glass.html#camera" target="janela" alt="A câmera onde serão gravadas as imagens para aparecer na tela frontal do óculos.">
+                <!--TERCEIRA AREA E LINK DOS GADGETS-->
+                <area shape="circle" coords="73,52,12" href="google-glass.html#gadgets" target="janela" alt="A bateria do óculos para fornecer energia para os componentes do óculos por um dia inteiro.">
+                <!--QUARTA AREA DA TELA E LINK DOS SENSORES-->
+                <area shape="poly" coords="28,143,83,216,84,249,27,169" href="google-glass.html#sensores" target="janela" alt="São os sensores e microfones embutidos bastando falar ou passar os dedos para responder a ações da tela.">
+            </map>
+            
+            <!--iframe SERVE PARA CARREGAR OUTRO CONTEUDO E IMAGENS DE OUTRA PAGINA EXTERNA-->
+            <!--TODO iframe TEM QUE TER UM NOME-->
+            <iframe src="google-glass.html" name="janela" id="frame-spec"></iframe>
+        </section>
+    </article>
+</section>
+
+<footer id="rodape">
+    <!--SIMBOLOS SEMPRE COMECA COM '&'-->
+<p>Copyright &copy; 2024 - by Gustavo Guanabara / Laércio Matheus<br/>
+    <!--A TAG 'target com parametro _blank' SERVE PARA ABRIR O LINK EM UMA NOVA ABA-->
+<a href="#" target="_blank">GitHub</a> | <a href="#" target="_blank">Linkedin</a></p>
+</footer>
+</div>
+</body>
+</html>

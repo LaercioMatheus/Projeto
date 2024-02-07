@@ -1,0 +1,134 @@
+@charset "UTF-8";
+
+/*CONFIGURANDO OS ELEMENTOS E DETALHES DA LISTA*/
+ul#album-fotos {
+    width: 700px;
+    margin: 0 auto;
+    padding: 50px;
+    overflow: hidden;
+    list-style: none;/*ocultar os detalhes da lista*/
+}
+
+ul#album-fotos li {
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 5px solid white;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .4);
+    /*O EFEITO SUAVE DO EFEITO DE AMPLIACAO*/
+    transition: all .4s ease-in-out;/*ease-in-out EFEITO SUAVE*/
+    /*O PARAMETRO all INFORMA QUE E PARA TODOS OS ELEMENTOS*/
+}
+
+/*AS FORMACACOES E EFEITOS DAS LEGENDAS DAS FOTOS QUE ESTAO DENTRO DO 'span'*/
+ul#album-fotos li span {
+    opacity: 0;/*NIVEL DE OPACIDADE PARA AS LEGENDAS*/
+    color: #ffffff;
+    text-shadow: 1px #000000;
+    background-color: rgba(0, 0, 0, .3);
+    font-size: 9pt;
+    line-height: 370px;/*ESSE PARAMETRO VAI FAZER COM QUE A LEGENDA FIQUE NA PARTE DE BAIXO DA IMAGEM*/
+    padding: 5px;
+}
+
+/*CONFIGURACOES PARA TODOS OS 'li hover'*/
+ul#album-fotos li:hover {
+    transform: scale(1.5);
+}
+
+
+/*CONFIGURACOES PARA O EFEITO DE APARECIMENTO DA LEGENDA SOBRE A FOTO*/
+ul#album-fotos li:hover span {
+    opacity: 1;
+    
+}
+
+/*COLOCANDO AS IMAGENS SEM O USO DA TAG 'img'*/
+/*AS FORMATACOES DAS FOTOS DENTRO DA LISTA*/
+/*PRIMEIRA FOTO*/
+ul#album-fotos li#foto01 {
+    background-image: url('../_imagens/galeria-01.jpg');
+    /*ELE VAI MUDAR O POSICIONAMENTO DA IMAGEM*/
+    /*COM OS 50% DE CADA VAI FICAR NO MEIO DA IMAGEM*/
+    background-position: 50% 50%;/*OS 50% E PARA A LATERAL E VESTICAL RESPECTIVAMENTE*/
+    background-size: 400px 400px ;/*ISSO VAI SER O TAMANHO DA IMAGEM DE FUNDO*/
+    background-color: #ffffff;
+}
+/*CONFIGURANDO O EFEITO DE ZOO QUANDO PASSAR O MOUSE SOBRE AS FOTOS*/
+ul#album-fotos li#foto01:hover {
+    background-position: 0px 0px;/*VAI VOLTAR MOSTRAR A PARTE DE CIMA DA IMAGEM*/
+    background-size: 200px 200px;/*VAI VOLTAR A MOSTRAR A IMAGEM TODA*/
+}
+
+
+/*SEGUNDA FOTO*/
+ul#album-fotos li#foto02 {
+    background-image: url('../_imagens/galeria-02.jpg');
+    background-position: 50% 50%;
+    background-size: 400px 400px;
+    background-color: #ffffff;
+}
+/*CONFIGURANDO O EFEITO DE ZOO QUANDO PASSAR O MOUSE SOBRE AS FOTOS*/
+ul#album-fotos li#foto02:hover {
+    background-position: 0px 0px;/*VAI VOLTAR MOSTRAR A PARTE DE CIMA DA IMAGEM*/
+    background-size: 200px 200px;/*VAI VOLTAR A MOSTRAR A IMAGEM TODA*/
+}
+
+
+/*TERCEIRA FOTO*/
+ul#album-fotos li#foto03 {
+    background-image: url('../_imagens/galeria-03.jpg');
+    background-position: 50% 50%;
+    background-size: 400px 400px;
+    background-color: #ffffff;
+}
+/*CONFIGURANDO O EFEITO DE ZOO QUANDO PASSAR O MOUSE SOBRE AS FOTOS*/
+ul#album-fotos li#foto03:hover {
+    background-position: 0px 0px;/*VAI VOLTAR MOSTRAR A PARTE DE CIMA DA IMAGEM*/
+    background-size: 200px 200px;/*VAI VOLTAR A MOSTRAR A IMAGEM TODA*/
+}
+
+
+/*QUARTA FOTO*/
+ul#album-fotos li#foto04 {
+    background-image: url('../_imagens/galeria-04.jpg');
+    background-position: 50% 50%;
+    background-size: 400px 400px;
+    background-color: #ffffff;
+}
+/*CONFIGURANDO O EFEITO DE ZOO QUANDO PASSAR O MOUSE SOBRE AS FOTOS*/
+ul#album-fotos li#foto04:hover {
+    background-position: 0px 0px;/*VAI VOLTAR MOSTRAR A PARTE DE CIMA DA IMAGEM*/
+    background-size: 200px 200px;/*VAI VOLTAR A MOSTRAR A IMAGEM TODA*/
+}
+
+
+/*QUINTA FOTO*/
+ul#album-fotos li#foto05 {
+    background-image: url('../_imagens/galeria-05.jpg');
+    background-position: 50% 50%;
+    background-size: 400px 400px;
+    background-color: #ffffff;
+}
+/*CONFIGURANDO O EFEITO DE ZOO QUANDO PASSAR O MOUSE SOBRE AS FOTOS*/
+ul#album-fotos li#foto05:hover {
+    background-position: 0px 0px;/*VAI VOLTAR MOSTRAR A PARTE DE CIMA DA IMAGEM*/
+    background-size: 200px 200px;/*VAI VOLTAR A MOSTRAR A IMAGEM TODA*/
+}
+
+
+/*SEXTA FOTO*/
+ul#album-fotos li#foto06 {
+    background-image: url('../_imagens/galeria-06.jpg');
+    background-position: 50% 50%;
+    background-size: 400px 400px;
+    background-color: #ffffff ;
+}
+/*CONFIGURANDO O EFEITO DE ZOO QUANDO PASSAR O MOUSE SOBRE AS FOTOS*/
+ul#album-fotos li#foto06:hover {
+    background-position: 0px 0px;/*VAI VOLTAR MOSTRAR A PARTE DE CIMA DA IMAGEM*/
+    background-size: 200px 200px;/*VAI VOLTAR A MOSTRAR A IMAGEM TODA*/
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Tudo sobre Google Glass</title>
+    <link rel="stylesheet" href="_css/estilo.css"/>
+    <link rel="stylesheet" href="_css/form.css"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    
+    <!--AS CONFIGURACOES EM JAVASCRIPT PARA OS EFEITOS DAS IMAGENS DO MENU-->
+<!--ESSE CODIGO EM JAVASCRIPT ESTA NO ARQUIVO HTML PORQUE ELE E UMA CONFIGURACAO JS INTERNA-->
+<!--ESSA E O 'LINK' PARA O ARQUICO JAVASCRIPT EXTERNO-->
+<script src="_javascript/funcoes.js"></script>
+</head>
+<body>
+<div id="interface">
+
+    <!--A DELIMITACAO DO header E O CABECALHO DO SITE-->
+<header id="cabecalho">
+    
+    <!--hgroup SERVE PARA AGRUPAR UM GRUPO DE TITULOS-->
+    <hgroup>
+        <h1>Google Glass</h1>
+        <h2>A revolução do Google está chegando</h2>
+    </hgroup>
+    <!--A IMAGEM DO OCULOS ABAIXO DO MENU-->
+    <img id="icone" src="_imagens/contato.png" alt="Logo do site Google Glass"/>
+
+    <!--A TAG nav SIGNIFICA QUE TUDO VAI SER CONSIDERADO UM MENU DE NAVEGACAO-->
+    <nav id="menu"> <!--A TAG 'id' SERVE PARA CRIA UMA IDENTIFICACAO PARA A TAG-->
+        <h1>Principal</h1>
+        <!--SEMPRE TENHO QUE DEFINIR O TYPE COMO ABAIXO 'disc' SEGUIDO DO START COM ***NUMERO*** -->
+        <ul>
+            <!--PARA LINKS EXTERNOS TENHO QUE COLOCAR O "https"-->
+            <!--ESTOU USANDO UM OBJETO DE MENU PARA MODIFICAR OUTRO OBJETO COM IDENTIFICADOR 'icone'-->
+            <li onmousemove="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="index.html">Home</a></li>
+
+            <li onmousemove="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="specs.html">Especificações</a></li>
+
+            <li onmousemove="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fotos.html">Fotos</a></li>
+
+            <li onmousemove="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
+
+            <li onmousemove="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <section id="corpo-full">
+        <!--A TAG 'article' SERVE PARA DELIMITAR PARTES DO SITE QUE SAO ARTIGOS. UMA MESMA section PODE TER VARIAS TAGS 'article'-->
+        <article id="noticia-principal">
+            <!--ESSE 'header' E O CABECALHO DO 'article'-->
+            <header id="cabecalho-artigo">
+                <hgroup>
+                    <!--OS '&nbsp' SIGNIFICA Non-Breaking Space OU ESPACO SEM QUEBRA. VAO CAUSAR ESPACOS EM BRANCO-->
+                    <h3>Fale Conosco > Contato</h3> <!--AQUI É O GRADGRAMPS, ONDE VOU NAVEGAR PELO SITE-->
+                    <h1>Formulário de Conatato</h1>
+                    <h2>por Gustavo Guanabara & Laércio Matheus</h2>
+                    <h3 class="direita">Atualizado em 29/Janeiro/2024</h3>
+                </hgroup>
+            </header>
+
+            <!--FORMULARIO DE CONTATO DO USUARIO-->
+            <!--POSSO COLOCAR EM 'name o "t"' E 'id o "c"' O 't' DE TEXTO E O 'c' DE CAMPO-->
+            <!-- 'maxlength' QUNATIDADE DE CARACTERES QUE VAI ACEITAR-->
+            <!--size' O TAMANHO MAXIMO-->
+            <form method="post" id="fContato" action="_php/funcoes.php" oninput="calc_total();">
+                <!--O PARAMETRO 'calc_total();' E UMA FUNCAO E VAI SER DISPARADO QUANDO EU ESCOLHER A QUANTIDADE-->
+                <!--fieldset SIGNIFICA CONJUNTO DE CAMPOS-->
+                <fieldset id="usuario">
+                    <legend>Identificação do Usuário</legend>
+                        <p> <label for="cNome">Nome: </label><input type="text" name="tNome" id="cNome" size="20" minlength="5" maxlength="30" placeholder="Seu nome..." required></p>
+
+                        <p> <label for="cSenha">Senha: </label><input type="password" name="tSenha" id="cSenha" size="20" minlength="6" maxlength="10" placeholder="Senha 8 digitos..." required></p>
+
+                        <p> <label for="cMail">E-mail: </label><input type="email" name="tMail" id="cMail" size="20" minlength="10" maxlength="40" placeholder="Seu email..." required></p>
+
+                        <!--TODO OBJETO QUE FAZER PARTE DO MESMO 'radio' TEM QUE TER O MESMO 'name'-->
+                        <!--OS 'label' SERVEM PARA REFERENCIAR OS OBJETOS AOS SEUS 'id'. A FUNCAO DE UM label DENTRO DE UM 'input' E PARA CLICAR NA PALAVRA E SELECIONAR O 'radio'-->
+                        <fieldset id="sexo"><legend>Sexo</legend>
+                            <input type="radio" name="tSexo" id="cMasc"> <label for="cMasc">Masculino</label></input><br>
+                            <input type="radio" name="tSexo" id="cFem" checked> <label for="cFem">Feminino</label></input>
+                        </fieldset>
+                            <p>Data de Nascimento: <input type="date" name="tData" id="cData" required></p>
+                </fieldset>
+
+                <fieldset id="endereco">
+                    <legend>Endereço do Usuário</legend>
+                        <p>Logradouro: <input type="text" name="tRua" id="cRua" size="20" maxlength="80" placeholder="Rua, Av..." required></p>
+
+                        <p>Número: <input type="number" name="tNum" id="cNum" min="0" max="99999" placeholder="4, 65..."></p>
+
+                        <p><label for="cEst">Estado: <select name="tEst" id="cEst" required>
+                                <!--(1) ->REGIOES NORTE-->
+                                <!--(2) ->REGIAO NORDESTE-->
+                                <!--(3) ->REGIAO CENTRO-OESTE-->
+                                <!--(4) ->REGIAO SUDESTE-->
+                                <!--(5) ->REGIAO SUL-->
+                                <optgroup label="Região Norte">
+                                    <option value="AC">Acre</option>
+                                    <option value="TO">Tocantins</option>
+                                    <option value="AM">Amazônas</option>
+                                    <option value="AP">Amapá</option>
+                                    <option value="PA">Pará</option>
+                                    <option value="RO">Rondônia</option>
+                                    <option value="RR">Roraima</option>
+                                </optgroup>
+
+                                <optgroup label="Região Nordeste">
+                                    <option value="AL">Alagoas</option>
+                                    <option value="BA">Bahia</option>
+                                    <option value="CE">Ceara</option>
+                                    <option value="MA">Maranhao</option>
+                                    <option value="PI">Piaui</option>
+                                    <option value="PE">Pernambuco</option>
+                                    <option value="PB">Paraiba</option>
+                                    <option value="SE">Sergipe</option>
+                                    <option value="RN">Rio Grande do Norte</option>
+                                </optgroup>
+
+                                <optgroup label="Região Centro-Oeste">
+                                    <option value="DF" selected>Distrito Federal</option>
+                                    <option value="GO">Goias</option>
+                                    <option value="MT">Mato Grosso</option>
+                                    <option value="MS">Mato Grosso do Sul</option>
+                                </optgroup>
+
+                                <optgroup label="Região Sudeste">
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="ES">Espirito Santo</option>
+                                </optgroup>
+
+                                <optgroup label="Região Sul">
+                                    <option value="RS">Rio Grande do Sul</option>
+                                    <option value="PR">Parana</option>
+                                    <option value="SC">Santa Catarina</option>
+                                </optgroup>
+                            </select>
+                        </label></p>
+
+                        <p><label for="cCid">Cidade: <input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Sua Cidade..." list="cidades"></label></p>
+
+                        <!--TENHO QUE COMPLETAR AS SUGESTOES DAS CIDADES-->
+                        <datalist id="cidades">
+                            <option value="Distrito Federal"></option>
+                            <script src="_php/funcoes.php"></script>
+                            <!--<option value="Planaltina"></option>
+                            <option value="Lago Norte"></option>
+                            <option value="Taguatinga"></option>-->
+                        </datalist>
+                </fieldset>
+
+                <fieldset id="mensagem">
+                    <legend>Mensagem do Usuário</legend>
+                        <p><label for="cUrg">Grau de Urgência:</label> Min <input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2"> Max</p>
+
+                        <p><label for="cMsg">Mensagem: </label><textarea name="tMsg" id="cMsg" cols="30" rows="5" placeholder="Deixe aqui sua mensagem..."></textarea></p>
+                </fieldset>
+
+                <fieldset id="pedido">
+                    <legend>Quero um Google Glass</legend>
+                        <p><label for="cPed"><input type="checkbox" name="tPed" id="cPed" checked> Gostaria de adquirir um Google Glass quando disponível</label></p>
+                        <!--PRECISO CONFIGURAR UMAS CORES PEDRAO PARA TIRAR ESSE ESCOLHA COR-->
+                        <p><label for="cCor">Cor: </label><input type="color" name="tCor" id="cCor" value="#0000FF"></p>
+
+                        <p><label for="cQtd">Quantidade: </label><input type="number" name="tQtd" id="cQtd" min="0" max="5"></p>
+
+                        <p><label for="cTot">Preço Total: R$ </label><input type="text" name="tTot" id="cTot" placeholder="Total a Pagar" readonly></p>
+                        <!--O PARAMETRO 'readonly' SERVE PARA BLOQUEAR O USUARIO QUANDO ELE FOR ESCREVER ALGO NO LABEL-->
+                </fieldset>
+
+                <input type="image" name="tEnviar" id="cEnviar" src="_imagens/botao-enviar.png" alt="Botão para enviar o formulário de pedido do óculos">
+            </form>
+
+        </article>
+    </section>     
+
+
+    <footer id="rodape">
+        <!--SIMBOLOS SEMPRE COMECA COM '&'-->
+        <p>Copyright &copy; 2024 - by Gustavo Guanabara / Laércio Matheus<br/>
+        <!--A TAG 'target com parametro _blank' SERVE PARA ABRIR O LINK EM UMA NOVA ABA-->
+        <a href="#" target="_blank">GitHub</a> | <a href="#" target="_blank">Linkedin</a></p>
+    </footer>
+</div>
+</body>
+</html>

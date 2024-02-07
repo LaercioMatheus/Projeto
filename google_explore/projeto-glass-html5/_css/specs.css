@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+section#conteudo {
+    width: 1000px;
+    margin: auto;
+}
+iframe#frame-spec {
+    width: 425px;
+    height: 280px;
+    border: none;
+    overflow: hidden;/*ESSA CONFIGURACAO SERVE PARA TRAVAR A BARRA DE ROLAGEM DO IFRAME*/
+}
+
+/*ESSA CONFIGURACAO SERVE PARA ESCONDER A BARRA DE ROLAGEM DO IFRAME*/
+iframe#frame-spec::-webkit-scrollbar {
+    display: none;
+}
+/*A PARTE DO DISPLAY E DO OVERFLOW NAO ESTA FUNCIONANDO CORRETAMENTE NAO SEI O QUE CAUSOU MAS VOU TENTAR VER PARAMETROS ATUAIS*/
