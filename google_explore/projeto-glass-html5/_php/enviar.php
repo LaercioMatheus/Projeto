@@ -7,7 +7,8 @@
 </head>
 <body>
     <?php
-
+/**ESSA É A FUNCAO PARA MANDAR OS DADOS PARA O MEU EMAIL*/
+/**AINDA ESTA EM FASE DE CONCLUSAO */
     isset($_POST['cMail']) ? $_POST['cMail'] : "Não foi possivel enviar o email!";
         $nome = addslashes($_POST['cNome']);
         $email = addslashes($_POST['cMail']);

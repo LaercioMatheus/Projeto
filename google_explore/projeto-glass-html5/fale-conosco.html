@@ -6,6 +6,7 @@
     <title>Tudo sobre Google Glass</title>
     <link rel="stylesheet" href="_css/estilo.css"/>
     <link rel="stylesheet" href="_css/form.css"/>
+    <link rel="import" href="_php/sujestao.php">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     
     <!--AS CONFIGURACOES EM JAVASCRIPT PARA OS EFEITOS DAS IMAGENS DO MENU-->
@@ -71,7 +72,7 @@
             <!--POSSO COLOCAR EM 'name o "t"' E 'id o "c"' O 't' DE TEXTO E O 'c' DE CAMPO-->
             <!-- 'maxlength' QUNATIDADE DE CARACTERES QUE VAI ACEITAR-->
             <!--size' O TAMANHO MAXIMO-->
-            <form method="post" id="fContato" action="_php/funcoes.php" oninput="calc_total();">
+            <form method="post" id="fContato" action="_php/enviar.php" oninput="calc_total();">
                 <!--O PARAMETRO 'calc_total();' E UMA FUNCAO E VAI SER DISPARADO QUANDO EU ESCOLHER A QUANTIDADE-->
                 <!--fieldset SIGNIFICA CONJUNTO DE CAMPOS-->
                 <fieldset id="usuario">
@@ -150,10 +151,12 @@
                         <p><label for="cCid">Cidade: <input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Sua Cidade..." list="cidades"></label></p>
 
                         <!--TENHO QUE COMPLETAR AS SUGESTOES DAS CIDADES-->
-                        <datalist id="cidades">
-                            <option value="Distrito Federal"></option>
-                            <script src="_php/funcoes.php"></script>
-                            <!--<option value="Planaltina"></option>
+                        <datalist id="cidades" onclick="sujestao()">
+                            <option value="script">
+                                <script src="_php/sujestao.php"></script>
+                            </option>
+                            <!--<option value="Distrito Federal"></option>
+                            <option value="Planaltina"></option>
                             <option value="Lago Norte"></option>
                             <option value="Taguatinga"></option>-->
                         </datalist>
