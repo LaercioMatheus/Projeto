@@ -182,43 +182,47 @@ header#cabecalho-artigo h1 {
     margin-top: 0px;
 }
 
- nav#redes ul {
+/*OS ESTILOS E POSICOES DOS LINKS DAS REDES SOCIAIS*/
+nav#redes ul {
     display: block;
     position: relative;
-    text-transform: uppercase;
     list-style: none;
+    padding: 7px 0px 7px 20px;
+    margin: 0px;
+    
+}
+
+nav#redes li {
+    display: inline;
+    margin-right: 10px;
 }
 
 nav#redes a {
     text-decoration: none;
 }
 
-nav#redes li {
-   display: inline;
-   margin: 2px;
-   padding: 5px;
-}
-
+/*ESTILO DO SIBTITULO A DIREITA DO CABECALHO*/
 .direita {
     text-align: right;
+    margin-top: 5px;
 }
 
 /*FORMATACAO DE TODOS OS 'h2' DO CABECALHO*/
 header#cabecalho-artigo h2 {
-    font-size: 13pt;
-    color: #cecece;
+    font-size: 18pt;
+    color: #acacac;
     background-color: #ffffff;
     margin: 0px;
 }
 
-/**/
+/*ESTILOS DO CABECALHO PARA O 'h3'*/
 header#cabecalho-artigo h3 {
     font-size: 12pt;
     color: #606060;
 
 }
 
-/*STILOS PARA A TABELA*/
+/*ESTILOS PARA A TABELA*/
 table#tabelaspec {
     border: 1px solid #606060;
     border-spacing: 0px;
