@@ -172,18 +172,22 @@
                 <fieldset id="pedido">
                     <legend>Quero um Google Glass</legend>
                         <p><label for="cPed"><input type="checkbox" name="tPed" id="cPed" checked> Gostaria de adquirir um Google Glass quando disponível</label></p>
-                        <!--PRECISO CONFIGURAR UMAS CORES PEDRAO PARA TIRAR ESSE ESCOLHA COR-->
-                        <p><label for="cCor">Cor: </label>
-                            <input type="image" src="_imagens/Oculos-Google-Glass.A.png" alt="Imagem do modelo do óculos azul.">
-                            <input type="image" src="_imagens/Oculos-Google-Glass.B.png" alt="Imagem do modelo do óculos branco.">
-                            <input type="image" src="_imagens/Oculos-Google-Glass.R.png" alt="Imagem do modelo do óculos rosa.">
-                            <input type="image" src="_imagens/Oculos-Google-Glass.V.png" alt="Imagem do modelo do óculos vermelho.">
+
+                        <!--OS BOTOES DE RADIO PARA ESCOLHER UMA COR PRECISA PARA OS OCULOS-->
+                        <p>Cor:
+                            <label for="cAzul"><input type="radio" name="tRadio" id="cAzul"><img src="_imagens/Oculos-Azul.jpg" alt="Imagem do modelo do óculos azul."  class="oculos-icon"></input></label>
+
+                            <label for="cBranco"><input type="radio" name="tRadio" id="cBranco" checked><img src="_imagens/Oculos-Branco.jpg" alt="Imagem do modelo do óculos branco." class="oculos-icon"></input></label>
+
+                            <label for="cRosa"><input type="radio" name="tRadio" id="cRosa"><img src="_imagens/Oculos-Rosa.jpg" alt="Imagem do modelo do óculos rosa." class="oculos-icon"></input></label>
+
+                            <label for="cVermelho"><input type="radio" name="tRadio" id="cVermelho"><img src="_imagens/Oculos-Vermelho.jpg" alt="Imagem do modelo do óculos vermelho." class="oculos-icon"></input></label>
                         </p>
-                            <!--<input type="color" name="tCor" id="cCor" value="#0000FF"></p>-->
-
                             
+                        <!--ESCOLHER A QUATIDADE DE OCULOS-->
                         <p><label for="cQtd">Quantidade: </label><input type="number" name="tQtd" id="cQtd" min="0" max="5"></p>
-
+                        
+                        <!--CALCULAR O PRECO A PARTIR DA QUANTIDADE DE OCULOS-->
                         <p><label for="cTot">Preço Total: R$ </label><input type="text" name="tTot" id="cTot" placeholder="Total a Pagar" readonly></p>
                         <!--O PARAMETRO 'readonly' SERVE PARA BLOQUEAR O USUARIO QUANDO ELE FOR ESCREVER ALGO NO LABEL-->
                 </fieldset>

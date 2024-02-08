@@ -61,3 +61,8 @@ fieldset#mensagem {
 fieldset#pedido {
     background: url('../_imagens/icone-pagamento.png') no-repeat 95% 95%;
 }
+
+/*ESTILOS DOS ICONES DOS OCULOS PARA O MODELO DE COR*/
+img.oculos-icon {
+    border-radius: 10px;
+}
